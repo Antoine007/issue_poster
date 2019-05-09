@@ -1,4 +1,4 @@
 ### Post Github issues to a repo
 
-Read issues from a CSV file.
+Read and post issues from a CSV file.
 💌

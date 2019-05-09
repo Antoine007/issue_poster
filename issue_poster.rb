@@ -6,7 +6,7 @@ require 'http'
 require 'csv'
 
 csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
-filepath = './HelpdeskExport.csv'
+filepath = '~/Downloads/GitlabIssues.csv'
 
 sent = 0
 max_to_send = 20 #comment out for everything
@@ -35,7 +35,7 @@ CSV.foreach(filepath, csv_options) do |row|
     }
     # p data
 
-    url = URI('https://api.github.com/repos/Autorama/Helpdesk/issues')
+    url = URI('https://api.github.com/repos/soenergy/main/issues')
     # response = HTTP.basic_auth(user: 'Antoine007', pass: ENV['GH_PW'])
     response = HTTP.basic_auth(user: 'Antoine007', pass: '')
                    .post(
